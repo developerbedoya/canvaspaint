@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- CSS Bootstrap -->
+	<link rel="stylesheet" 
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+		crossorigin="anonymous" />
+
+	<!-- Tema CSS Bootstrap -->
+	<link rel="stylesheet" 
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+		integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" 
+		crossorigin="anonymous" />
+
+	<!-- Canvas Paint Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="CanvasPaint.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>CanvasPaint</h1>
+			<p>
+				This is a simple Canvas exercise made for the sake of learning about HTML5 and BootStrap
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Canvas</h3>
+					</div>
+					<div class="panel-body">
+						<canvas id="myCanvas" width="800" height="600">
+							<p>Your browser doesn't support Canvas :P</p>
+						</canvas>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Colors</h3>
+					</div>
+					<div class="panel-body">
+						<img class="btn btn-xs btnClr red" src="img/red.png" />
+						<img class="btn btn-xs btnClr yellow" src="img/yellow.png" />
+						<img class="btn btn-xs btnClr green" src="img/green.png" />
+						<img class="btn btn-xs btnClr blue" src="img/blue.png" />
+						<img class="btn btn-xs btnClr black" src="img/black.png" />
+						<img class="btn btn-xs btnClr white" src="img/white.png" />
+						<img class="btn btn-xs btnClr special" src="img/special.png" />
+					</div>
+				</div>
+				
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Stroke Width</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="range" id="strokeSize" min="0" max="20" value="2">
+							</div>
+						</div>
+						<div class="row">
+							<div id="strokeSizeLabel" class="col-sm-12">2</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Pencil</h3>
+					</div>
+					<div class="panel-body">
+						<img class="btn btn-xs btnPencil circles" src="img/circles.png" />
+						<img class="btn btn-xs btnPencil lines" src="img/lines.png" />
+						<img class="btn btn-xs btnPencil fill" src="img/fill.png" />
+					</div>
+				</div>
+				
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Tools</h3>
+					</div>
+					<div class="panel-body">
+						<button class="btn btn-xs" id="undo">Undo</button>
+						<button class="btn btn-xs" id="clear">Clear</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script 
+		src="https://code.jquery.com/jquery-2.2.3.min.js"
+		integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+		crossorigin="anonymous">
+	</script>
+
+	<!-- Plugins Bootstrap -->
+	<script 
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+		crossorigin="anonymous">
+	</script>
+
+	<!-- Canvas Paint Javascript -->
+	<script type="text/javascript" src="CanvasPaint.js"></script>
+</body>
+
+</html>
